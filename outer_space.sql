@@ -13,6 +13,7 @@ CREATE TABLE moons (
 CREATE TABLE stars (
     star varchar(100) PRIMARY KEY,
     star_temp int
+    --indicate which unit (K?, C?, F?)
 );
 
 CREATE TABLE planets (
@@ -28,5 +29,6 @@ FROM planets
     JOIN stars 
         ON planets.star = stars.star
     JOIN moons
+    --left outer join
         ON moons.planet = planets.planet
 GROUP BY planets.planet, stars.star

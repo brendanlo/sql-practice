@@ -1,0 +1,17 @@
+-Bikes
+model_name
+model_code(primary key)
+price
+|
+#
+-Orders
+transaction(primary key)
+order_number
+note
+model_code
+
+-price
+case_number(primary key)
+model_code
+date_changed
+current_price
